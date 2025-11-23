@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Captura de Foto</title>
+<link rel="stylesheet" href="css/camera.css">
+</head>
+<body>
+<div class="camera-container">
+  <h1>Selecciona un filtro</h1>
+  <div class="filter-buttons">
+    <button onclick="setFilter('none')">Normal</button>
+    <button onclick="setFilter('grayscale(100%)')">Escala de grises</button>
+    <button onclick="setFilter('sepia(100%)')">Sepia</button>
+    <button onclick="setFilter('contrast(200%)')">Contraste</button>
+  </div>
+  <div class="camera-frame">
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="buttons">
+    <button onclick="capturePhoto()">Capturar Foto</button>
+    <button id="downloadBtn" style="display:none">Descargar Foto</button>
+    <button onclick="logout()">Cerrar sesión</button>
+  </div>
+</div>
+<script src="js/camera.js"></script>
+</body>
+</html>
